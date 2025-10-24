@@ -1,3 +1,18 @@
+/*
+--------------------------------------------------------------------------------------
+--  Procedure:  GET_AGENT_DDL
+--  Author:     Eric Heilman
+--  Version:    1.0.0
+--  Purpose:    Reconstructs the DDL for a Snowflake Agent from DESCRIBE output.
+--------------------------------------------------------------------------------------
+
+--  SCRIPT RELIES ON INTERNAL METADATA STRUCTURES THAT ARE SUBJECT TO CHANGE
+--  AT ANY TIME WITHOUT NOTICE. TEST THOROUGHLY. USE AT YOUR OWN RISK.
+--
+--------------------------------------------------------------------------------------
+*/
+
+
 CREATE OR REPLACE PROCEDURE GET_AGENT_DDL(AGENT_NAME VARCHAR)
 RETURNS VARCHAR
 LANGUAGE SQL
@@ -37,7 +52,3 @@ BEGIN
 END;
 $$;
 
-
-
--- /*SAMPLE CALL - MUST USE FULLY QUALIFIED AGENT NAME*/
--- CALL GET_AGENT_DDL('SNOWFLAKE_INTELLIGENCE.AGENTS.SNOWFLAKE_ACCOUNT_ASSISTANT');
