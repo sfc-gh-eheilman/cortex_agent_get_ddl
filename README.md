@@ -45,7 +45,7 @@ To get the DDL for an agent, use the `CALL` command. You must provide the **full
 
 ```sql
 -- SAMPLE CALL: Must use the fully qualified agent name
-CALL GET_AGENT_DDL('SNOWFLAKE_INTELLIGENCE.AGENTS.SNOWFLAKE_ACCOUNT_ASSISTANT');
+CALL GET_AGENT_DDL('DATABASE_NAME.SCHEMA.AGENT_NAME');
 ```
 
 ### Example Result
@@ -54,5 +54,5 @@ The procedure will return a single string containing the DDL:
 
 | GET\_AGENT\_DDL |
 | :--- |
-| `CREATE OR REPLACE AGENT SNOWFLAKE_INTELLIGENCE.AGENTS.SNOWFLAKE_ACCOUNT_ASSISTANT WITH PROFILE=$$...profile_content...$$ COMMENT=$$...comment_content...$$;` |
+| `CREATE OR REPLACE AGENT DATABASE_NAME.SCHEMA.AGENT_NAME WITH PROFILE=$$...profile_content...$$ COMMENT=$$...comment_content...$$;` |
 
